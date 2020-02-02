@@ -133,11 +133,15 @@ public class EstimateController {
         if(userOrderForm.getHasWashingMachineSettingOption() == Boolean.TRUE){
             dto.setWashingMachineSettingOption(Boolean.TRUE);
         }
-        Integer price = estimateService.getPrice(dto);
+        Integer[] price = estimateService.getPrice(dto);
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
-        model.addAttribute("price", price);
+        model.addAttribute("dist", price[0]);
+        model.addAttribute("truck", price[1]);
+        model.addAttribute("option",price[2]);
+        model.addAttribute("price", price[3]);
+
         return "result";
     }
 
