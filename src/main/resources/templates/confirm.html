@@ -109,6 +109,15 @@
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
 <script src="../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript">
+    function fillZero(element, num) {
+    	var value = element.value;
+    	while (value.length < num) {
+    		value = '0' + value.slice(-2);
+    	}
+    	element.value = value;
+    }
+    </script>
 </body>
 
 </html>

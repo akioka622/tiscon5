@@ -36,7 +36,67 @@
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
-            <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
+            <optgroup label="北海道・東北">
+              <option th:value="01" th:field="*{oldPrefectureId}">北海道</option>
+              <option th:value="02" th:field="*{oldPrefectureId}">青森</option>
+              <option value="03">岩手</option>
+              <option value="04">宮城</option>
+              <option value="05">秋田</option>
+              <option value="06">山形</option>
+              <option value="07">福島</option>
+            </optgroup>
+            <optgroup label="関東">
+              <option value="08">茨城</option>
+              <option value="09">栃木</option>
+              <option value="10">群馬</option>
+              <option value="11">埼玉</option>
+              <option value="12">千葉</option>
+              <option value="13">東京</option>
+              <option value="14">神奈川</option>
+            </optgroup>
+            <optgroup label="中部">
+              <option value="15">新潟</option>
+              <option value="16">富山</option>
+              <option value="17">石川</option>
+              <option value="18">福井</option>
+              <option value="19">山梨</option>
+              <option value="20">長野</option>
+              <option value="21">岐阜</option>
+              <option value="22">静岡</option>
+              <option value="23">愛知</option>
+            </optgroup>
+            <optgroup label="近畿">
+              <option value="24">三重</option>
+              <option value="25">滋賀</option>
+              <option value="26" th:field="*{oldPrefectureId}">京都</option>
+              <option value="27" th:field="*{oldPrefectureId}">大阪</option>
+              <option value="28">兵庫</option>
+              <option value="29">奈良</option>
+              <option value="30">和歌山</option>
+            </optgroup>
+            <optgroup label="中国">
+              <option value="31">鳥取</option>
+              <option value="32">島根</option>
+              <option value="33">岡山</option>
+              <option value="34">広島</option>
+              <option value="35">山口</option>
+            </optgroup>
+            <optgroup label="四国">
+              <option value="36">徳島</option>
+              <option value="37">香川</option>
+              <option value="38">愛媛</option>
+              <option value="39">高知</option>
+            </optgroup>
+            <optgroup label="九州・沖縄">
+              <option value="40">福岡</option>
+              <option value="41">佐賀</option>
+              <option value="42">長崎</option>
+              <option value="43">熊本</option>
+              <option value="44">大分</option>
+              <option value="45">宮崎</option>
+              <option value="46">鹿児島</option>
+              <option value="47">沖縄</option>
+            </optgroup>
           </select>
         </div>
         <div class="form-group">
@@ -47,7 +107,67 @@
         <div class="form-group">
           <label for="newPrefectureId">転居先住所（都道府県）</label>
           <select id="newPrefectureId" name="newPrefectureId" class="form-control">
-            <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
+            <optgroup label="北海道・東北">
+              <option th:value="01" th:field="*{newPrefectureId}">北海道</option>
+              <option th:value="02" th:field="*{newPrefectureId}">青森</option>
+              <option value="03">岩手</option>
+              <option value="04">宮城</option>
+              <option value="05">秋田</option>
+              <option value="06">山形</option>
+              <option value="07">福島</option>
+            </optgroup>
+            <optgroup label="関東">
+              <option value="08">茨城</option>
+              <option value="09">栃木</option>
+              <option value="10">群馬</option>
+              <option value="11">埼玉</option>
+              <option value="12">千葉</option>
+              <option value="13">東京</option>
+              <option value="14">神奈川</option>
+            </optgroup>
+            <optgroup label="中部">
+              <option value="15">新潟</option>
+              <option value="16">富山</option>
+              <option value="17">石川</option>
+              <option value="18">福井</option>
+              <option value="19">山梨</option>
+              <option value="20">長野</option>
+              <option value="21">岐阜</option>
+              <option value="22">静岡</option>
+              <option value="23">愛知</option>
+            </optgroup>
+            <optgroup label="近畿">
+              <option value="24">三重</option>
+              <option value="25">滋賀</option>
+              <option value="26" th:field="*{newPrefectureId}">京都</option>
+              <option value="27" th:field="*{newPrefectureId}">大阪</option>
+              <option value="28">兵庫</option>
+              <option value="29">奈良</option>
+              <option value="30">和歌山</option>
+            </optgroup>
+            <optgroup label="中国">
+              <option value="31">鳥取</option>
+              <option value="32">島根</option>
+              <option value="33">岡山</option>
+              <option value="34">広島</option>
+              <option value="35">山口</option>
+            </optgroup>
+            <optgroup label="四国">
+              <option value="36">徳島</option>
+              <option value="37">香川</option>
+              <option value="38">愛媛</option>
+              <option value="39">高知</option>
+            </optgroup>
+            <optgroup label="九州・沖縄">
+              <option value="40">福岡</option>
+              <option value="41">佐賀</option>
+              <option value="42">長崎</option>
+              <option value="43">熊本</option>
+              <option value="44">大分</option>
+              <option value="45">宮崎</option>
+              <option value="46">鹿児島</option>
+              <option value="47">沖縄</option>
+            </optgroup>
           </select>
         </div>
         <div class="form-group">
